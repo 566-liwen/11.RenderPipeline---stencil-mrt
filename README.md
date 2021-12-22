@@ -11,7 +11,7 @@ Shader 2 (combine pass) : Getting render targets value as 2D textures -> sample 
 
 ### Mimic Stencil technique by writing object geometry information in color to a specific render target
 Some cautions here:
-1. Each object should have its own render target to store geometry information. 
+1. Each object we want to distinguish should have its own render target to store geometry information. 
  -> Failed to do so, it will casue all object information mixed together (color stacking/overwritten).
 2. Do ```ZTest Off``` for these passes which writting geom information to render targets. -> Otherwise, color stacking/overwritten
 3. Be sure to check object rendering order by checking queue order
